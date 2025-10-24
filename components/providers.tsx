@@ -26,16 +26,25 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    if (!supabase) {
+      console.warn('Supabase is not available. Authentication will not work.')
+      setLoading(false)
+      return
+    }
+
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data: { session } }: any) => {
       setUser(session?.user ?? null)
+      setLoading(false)
+    }).catch((error: any) => {
+      console.error('Error getting session:', error)
       setLoading(false)
     })
 
     // Listen for auth changes
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
       setUser(session?.user ?? null)
       setLoading(false)
     })
@@ -44,16 +53,34 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, [])
 
   const signIn = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
-      },
-    })
+    if (!supabase) {
+      console.error('Supabase is not available. Cannot sign in.')
+      return
+    }
+    
+    try {
+      await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      })
+    } catch (error: any) {
+      console.error('Error signing in:', error)
+    }
   }
 
   const signOut = async () => {
-    await supabase.auth.signOut()
+    if (!supabase) {
+      console.error('Supabase is not available. Cannot sign out.')
+      return
+    }
+    
+    try {
+      await supabase.auth.signOut()
+    } catch (error: any) {
+      console.error('Error signing out:', error)
+    }
   }
 
   return (
