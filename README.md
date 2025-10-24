@@ -1,194 +1,194 @@
 # AI Task Manager
 
 <div align="center">
-  <h3>Transforma tus pensamientos en tareas organizadas con Inteligencia Artificial</h3>
-  <p>Una aplicación moderna de gestión de tareas potenciada por IA que procesa lenguaje natural en múltiples idiomas</p>
+  <h3>Transform your thoughts into organized tasks with Artificial Intelligence</h3>
+  <p>A modern task management application powered by AI that processes natural language in multiple languages</p>
 </div>
 
-## 🚀 Características Principales
+## 🚀 Key Features
 
-> Esta aplicación utiliza **GPT-4** para transformar pensamientos naturales en tareas estructuradas con **25+ campos de análisis**, incluyendo contexto emocional, herramientas necesarias, criterios de éxito y posibles bloqueadores. Todo esto con **seguridad de nivel empresarial** mediante Row Level Security (RLS) y autenticación OAuth.
+> This application uses **GPT-4** to transform natural thoughts into structured tasks with **25+ analysis fields**, including emotional context, necessary tools, success criteria, and potential blockers. All with **enterprise-level security** through Row Level Security (RLS) and OAuth authentication.
 
-### 🤖 **Procesamiento de IA Avanzado**
-- **Análisis Inteligente**: Utiliza GPT-4 para extraer información estructurada de texto natural
-- **Múltiples Idiomas**: Detecta automáticamente el idioma y traduce al inglés para procesamiento
-- **Análisis Contextual**: Identifica prioridad, urgencia, complejidad y contexto emocional
-- **Sugerencias Inteligentes**: Genera acciones sugeridas, criterios de éxito y posibles bloqueadores
-- **Sistema de Fallback**: Análisis básico automático si OpenAI no está disponible
-- **Validación de Fechas**: Corrección inteligente de fechas inválidas o pasadas
-- **Prompt Engineering Avanzado**: Implementa 10+ técnicas modernas de prompt engineering
+### 🤖 **Advanced AI Processing**
+- **Intelligent Analysis**: Uses GPT-4 to extract structured information from natural language
+- **Multiple Languages**: Automatically detects language and translates to English for processing
+- **Contextual Analysis**: Identifies priority, urgency, complexity, and emotional context
+- **Smart Suggestions**: Generates suggested actions, success criteria, and potential blockers
+- **Fallback System**: Automatic basic analysis if OpenAI is unavailable
+- **Date Validation**: Intelligent correction of invalid or past dates
+- **Advanced Prompt Engineering**: Implements 10+ modern prompt engineering techniques
 
-### 🌍 **Soporte Multilingüe**
-- **Detección Automática**: Reconoce 6 idiomas principales: español, inglés, francés, alemán, italiano y portugués entre otros
-- **Traducción Inteligente**: Convierte automáticamente el texto al inglés para procesamiento con GPT-4
-- **Títulos Profesionales**: Genera títulos optimizados para almacenamiento en base de datos
-- **Fallback Robusto**: Sistema de traducción de respaldo para frases comunes
+### 🌍 **Multilingual Support**
+- **Automatic Detection**: Recognizes 6 main languages: Spanish, English, French, German, Italian, and Portuguese among others
+- **Intelligent Translation**: Automatically converts text to English for processing with GPT-4
+- **Professional Titles**: Generates optimized titles for database storage
+- **Robust Fallback**: Backup translation system for common phrases
 
-### 🎯 **Gestión Inteligente de Tareas**
-- **Análisis Completo**: Cada tarea incluye:
-  - Título y descripción
-  - Prioridad (baja, media, alta)
-  - Urgencia e importancia (escala 1-10)
-  - Complejidad (simple, moderada, compleja)
-  - Fecha de vencimiento
-  - Categoría y etiquetas
-  - Duración estimada
-  - Subtareas sugeridas
-  - Contexto emocional y laboral
-  - Herramientas necesarias
-  - Criterios de éxito
-  - Posibles bloqueadores
+### 🎯 **Intelligent Task Management**
+- **Complete Analysis**: Each task includes:
+  - Title and description
+  - Priority (low, medium, high)
+  - Urgency and importance (1-10 scale)
+  - Complexity (simple, moderate, complex)
+  - Due date
+  - Category and tags
+  - Estimated duration
+  - Suggested subtasks
+  - Emotional and work context
+  - Necessary tools
+  - Success criteria
+  - Potential blockers
 
-### 🎨 **Interfaz Moderna y Responsiva**
-- **Diseño Adaptativo**: Optimizado para móviles, tablets y escritorio
-- **Tema Oscuro/Claro**: Cambio automático basado en preferencias del sistema
-- **Animaciones Fluidas**: Transiciones suaves con Framer Motion
-- **UI/UX Optimizada**: Botones de acción separados para evitar errores accidentales
+### 🎨 **Modern and Responsive Interface**
+- **Adaptive Design**: Optimized for mobile, tablets, and desktop
+- **Dark/Light Theme**: Automatic switching based on system preferences
+- **Smooth Animations**: Fluid transitions with Framer Motion
+- **Optimized UI/UX**: Separated action buttons to prevent accidental errors
 
-### 🔐 **Autenticación y Seguridad**
-- **Google OAuth**: Inicio de sesión seguro con Google
-- **Supabase Auth**: Autenticación robusta con Row Level Security (RLS)
-- **Datos Privados**: Cada usuario solo puede ver y gestionar sus propias tareas
-- **Políticas de Seguridad**: 4 políticas RLS que garantizan aislamiento total de datos
-- **Manejo de Errores**: Gestión robusta de errores de autenticación y redirección
-- **Modo Demo**: Funcionamiento sin autenticación para demostración
+### 🔐 **Authentication and Security**
+- **Google OAuth**: Secure login with Google
+- **Supabase Auth**: Robust authentication with Row Level Security (RLS)
+- **Private Data**: Each user can only view and manage their own tasks
+- **Security Policies**: 4 RLS policies that guarantee complete data isolation
+- **Error Handling**: Robust management of authentication errors and redirection
+- **Demo Mode**: Operation without authentication for demonstration
 
-### 📊 **Monitoreo y Estado**
-- **Estado de Servicios**: Monitoreo en tiempo real de Supabase, OpenAI y almacenamiento local
-- **Indicadores Visuales**: Estado de conexión con colores y iconos intuitivos
-- **Estado de Conexión**: Verificación automática del estado de los servicios backend
+### 📊 **Monitoring and Status**
+- **Service Status**: Real-time monitoring of Supabase, OpenAI, and local storage
+- **Visual Indicators**: Connection status with intuitive colors and icons
+- **Connection Status**: Automatic verification of backend service status
 
-### 🎛️ **Funcionalidades Avanzadas**
-- **Filtrado Inteligente**: Por estado, prioridad y categoría
-- **Ordenamiento**: Por fecha de vencimiento, prioridad o fecha de creación
-- **Búsqueda**: Búsqueda en tiempo real por título, categoría y etiquetas
-- **Colapso/Expansión**: Análisis de IA expandible para cada tarea
-- **Gestión de Estado**: Zustand para manejo eficiente del estado global
+### 🎛️ **Advanced Features**
+- **Smart Filtering**: By status, priority, and category
+- **Sorting**: By due date, priority, or creation date
+- **Search**: Real-time search by title, category, and tags
+- **Collapse/Expand**: Expandable AI analysis for each task
+- **State Management**: Zustand for efficient global state management
 
-### 🚧 **Modo Demo con Límites**
-- **Límite Configurable**: Número máximo de tareas por usuario
-- **Modal Informativo**: Notificación elegante cuando se alcanza el límite
-- **Contacto de Soporte**: Enlace directo para solicitar versión completa
+### 🚧 **Demo Mode with Limits**
+- **Configurable Limit**: Maximum number of tasks per user
+- **Informative Modal**: Elegant notification when limit is reached
+- **Support Contact**: Direct link to request full version
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 ### **Frontend**
-- **Next.js 14**: Framework React con App Router
-- **React 18**: Biblioteca de interfaz de usuario
-- **TypeScript**: Tipado estático para mayor robustez
-- **Tailwind CSS**: Framework de estilos utilitarios
-- **Framer Motion**: Animaciones y transiciones
-- **Lucide React**: Iconografía moderna
+- **Next.js 14**: React framework with App Router
+- **React 18**: User interface library
+- **TypeScript**: Static typing for greater robustness
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animations and transitions
+- **Lucide React**: Modern iconography
 
-### **Backend y Servicios**
-- **Supabase**: Base de datos PostgreSQL y autenticación
-- **OpenAI GPT-4**: Procesamiento de lenguaje natural
-- **Zustand**: Gestión de estado global
-- **Next.js API Routes**: Endpoints del servidor
+### **Backend and Services**
+- **Supabase**: PostgreSQL database and authentication
+- **OpenAI GPT-4**: Natural language processing
+- **Zustand**: Global state management
+- **Next.js API Routes**: Server endpoints
 
-### **Capacidades Técnicas Avanzadas**
-- **Análisis de IA con 25+ campos**: title, priority, category, due_date, urgency, importance, complexity, tags, estimatedDuration, subtasks, context, suggestedActions, confidence, reasoning, timeSensitivity, emotionalContext, workContext, energyLevel, socialContext, locationContext, toolsNeeded, blockers, successCriteria
-- **Detección de idioma con IA**: Utiliza GPT-3.5-turbo para detección inteligente de idiomas
-- **Traducción con GPT-4**: Traducción contextual y profesional al inglés
-- **Validación de fechas inteligente**: Corrección automática de fechas inválidas o pasadas
-- **Sistema de fallback robusto**: Funcionamiento completo sin OpenAI
-- **Seguridad RLS**: 4 políticas de Row Level Security para aislamiento total de datos
+### **Advanced Technical Capabilities**
+- **AI Analysis with 25+ fields**: title, priority, category, due_date, urgency, importance, complexity, tags, estimatedDuration, subtasks, context, suggestedActions, confidence, reasoning, timeSensitivity, emotionalContext, workContext, energyLevel, socialContext, locationContext, toolsNeeded, blockers, successCriteria
+- **AI Language Detection**: Uses GPT-3.5-turbo for intelligent language detection
+- **GPT-4 Translation**: Contextual and professional translation to English
+- **Intelligent Date Validation**: Automatic correction of invalid or past dates
+- **Robust Fallback System**: Complete operation without OpenAI
+- **RLS Security**: 4 Row Level Security policies for complete data isolation
 
-### **🧠 Técnicas Avanzadas de Prompt Engineering**
-- **Structured Outputs**: Especificación JSON detallada para respuestas consistentes
-- **Chain-of-Thought**: Razonamiento paso a paso para análisis complejos
-- **Few-Shot Learning**: Ejemplos específicos para mejor comprensión
-- **Context Injection**: Inyección dinámica de contexto temporal y de usuario
-- **Role-Based Prompting**: Prompts especializados por dominio (análisis, traducción, redacción)
-- **Constraint-Based Prompting**: Reglas específicas de negocio (cálculo de fechas, validaciones)
-- **Multi-Step Processing**: Pipeline de 3 etapas (detección → traducción → análisis)
-- **Temperature Optimization**: Temperaturas optimizadas por tarea (0.1-0.2 para consistencia)
-- **Error Handling**: Sistemas de fallback robustos para máxima disponibilidad
-- **Domain-Specific Prompting**: Prompts especializados para gestión de tareas y productividad
+### **🧠 Advanced Prompt Engineering Techniques**
+- **Structured Outputs**: Detailed JSON specification for consistent responses
+- **Chain-of-Thought**: Step-by-step reasoning for complex analysis
+- **Few-Shot Learning**: Specific examples for better understanding
+- **Context Injection**: Dynamic injection of temporal and user context
+- **Role-Based Prompting**: Specialized prompts by domain (analysis, translation, writing)
+- **Constraint-Based Prompting**: Specific business rules (date calculation, validations)
+- **Multi-Step Processing**: 3-stage pipeline (detection → translation → analysis)
+- **Temperature Optimization**: Optimized temperatures per task (0.1-0.2 for consistency)
+- **Error Handling**: Robust fallback systems for maximum availability
+- **Domain-Specific Prompting**: Specialized prompts for task management and productivity
 
-### **Herramientas de Desarrollo**
-- **ESLint**: Linting de código
-- **Prettier**: Formateo de código
+### **Development Tools**
+- **ESLint**: Code linting
+- **Prettier**: Code formatting
 - **Jest**: Testing framework
-- **Docker**: Containerización
+- **Docker**: Containerization
 
-## 📦 Instalación y Configuración
+## 📦 Installation and Configuration
 
-### **Prerrequisitos**
+### **Prerequisites**
 - Node.js 18+ 
-- npm o yarn
-- Cuenta de Supabase
-- API Key de OpenAI
+- npm or yarn
+- Supabase account
+- OpenAI API Key
 
-### **1. Clonar el Repositorio**
+### **1. Clone the Repository**
 ```bash
 git clone https://github.com/tu-usuario/ai-task-manager.git
 cd ai-task-manager
 ```
 
-### **2. Instalar Dependencias**
+### **2. Install Dependencies**
 ```bash
 npm install
 ```
 
-### **3. Configurar Variables de Entorno**
-Crea un archivo `.env.local` basado en `env.example`:
+### **3. Configure Environment Variables**
+Create a `.env.local` file based on `env.example`:
 
 ```bash
 # Supabase Configuration
-NEXT_PUBLIC_SUPABASE_URL=tu_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_supabase_anon_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 # OpenAI Configuration
-OPENAI_API_KEY=tu_openai_api_key
+OPENAI_API_KEY=your_openai_api_key
 
 # Next.js Configuration
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=tu_nextauth_secret
+NEXTAUTH_SECRET=your_nextauth_secret
 
 # Task Limiting Configuration (Demo Mode)
 NEXT_PUBLIC_ENABLE_TASK_LIMIT=false
 NEXT_PUBLIC_MAX_TASKS_PER_USER=5
-NEXT_PUBLIC_SUPPORT_EMAIL=support@tu-empresa.com
+NEXT_PUBLIC_SUPPORT_EMAIL=support@your-company.com
 ```
 
-### **4. Configurar Supabase**
-1. Crea un nuevo proyecto en [Supabase](https://supabase.com)
-2. Ejecuta el script SQL en `supabase/schema.sql`
-3. Configura la autenticación con Google OAuth
+### **4. Configure Supabase**
+1. Create a new project at [Supabase](https://supabase.com)
+2. Run the SQL script in `supabase/schema.sql`
+3. Configure authentication with Google OAuth
 
-### **5. Ejecutar en Desarrollo**
+### **5. Run in Development**
 ```bash
 npm run dev
 ```
 
-La aplicación estará disponible en `http://localhost:3000`
+The application will be available at `http://localhost:3000`
 
-## 🚀 Despliegue
+## 🚀 Deployment
 
-### **Vercel (Recomendado)**
-1. Conecta tu repositorio a Vercel
-2. Configura las variables de entorno
-3. Despliega automáticamente
+### **Vercel (Recommended)**
+1. Connect your repository to Vercel
+2. Configure environment variables
+3. Deploy automatically
 
-### **🐳 Docker - Despliegue en Contenedor**
+### **🐳 Docker - Container Deployment**
 
-#### **Prerrequisitos para Docker**
-- Docker 20.10+ instalado
-- Docker Compose 2.0+ (para opción completa)
-- Al menos 2GB de RAM disponible
-- Puerto 3000 libre (o cambiar a otro puerto)
+#### **Docker Prerequisites**
+- Docker 20.10+ installed
+- Docker Compose 2.0+ (for complete option)
+- At least 2GB RAM available
+- Port 3000 free (or change to another port)
 
-#### **Opción 1: Docker Simple (Solo Aplicación)**
+#### **Option 1: Simple Docker (Application Only)**
 ```bash
-# 1. Configurar variables de entorno
+# 1. Configure environment variables
 cp env.docker.example .env.docker
-# Editar .env.docker con tus valores reales
+# Edit .env.docker with your real values
 
-# 2. Construir imagen
+# 2. Build image
 docker build -t ai-task-manager .
 
-# 3. Ejecutar contenedor
+# 3. Run container
 docker run -d \
   --name ai-task-manager \
   -p 3000:3000 \
@@ -196,74 +196,74 @@ docker run -d \
   --restart unless-stopped \
   ai-task-manager
 
-# 4. Verificar funcionamiento
+# 4. Verify operation
 docker logs ai-task-manager
 curl http://localhost:3000/api/health
 ```
 
-#### **Opción 2: Docker Compose (Aplicación + Base de Datos)**
+#### **Option 2: Docker Compose (Application + Database)**
 ```bash
-# 1. Configurar variables de entorno
+# 1. Configure environment variables
 cp env.docker.example .env.docker
-# Editar .env.docker con tus valores reales
+# Edit .env.docker with your real values
 
-# 2. Iniciar todos los servicios
+# 2. Start all services
 docker-compose up -d
 
-# 3. Verificar estado de servicios
+# 3. Verify service status
 docker-compose ps
 docker-compose logs app
 
-# 4. Acceder a la aplicación
-# Aplicación: http://localhost:3000
-# Base de datos: localhost:5432
+# 4. Access the application
+# Application: http://localhost:3000
+# Database: localhost:5432
 # Redis: localhost:6379
 ```
 
-#### **Comandos de Gestión Docker**
+#### **Docker Management Commands**
 
-**Detener servicios:**
+**Stop services:**
 ```bash
-# Docker simple
+# Simple Docker
 docker stop ai-task-manager
 
 # Docker Compose
 docker-compose down
 ```
 
-**Reiniciar servicios:**
+**Restart services:**
 ```bash
-# Docker simple
+# Simple Docker
 docker restart ai-task-manager
 
 # Docker Compose
 docker-compose restart
 ```
 
-**Ver logs:**
+**View logs:**
 ```bash
-# Docker simple
+# Simple Docker
 docker logs -f ai-task-manager
 
 # Docker Compose
 docker-compose logs -f app
 ```
 
-**Eliminar completamente:**
+**Complete removal:**
 ```bash
-# Docker simple
+# Simple Docker
 docker stop ai-task-manager
 docker rm ai-task-manager
 docker rmi ai-task-manager
 
 # Docker Compose
-docker-compose down -v  # Elimina también volúmenes
-docker-compose down --rmi all  # Elimina también imágenes
+docker-compose down -v  # Also removes volumes
+docker-compose down --rmi all  # Also removes images
 ```
 
-**Actualizar aplicación:**
+**Update application:**
 ```bash
-# Docker simple
+# Simple Docker
 docker stop ai-task-manager
 docker rm ai-task-manager
 docker build -t ai-task-manager .
@@ -275,263 +275,263 @@ docker-compose build --no-cache
 docker-compose up -d
 ```
 
-#### **Servicios Opcionales (Docker Compose)**
+#### **Optional Services (Docker Compose)**
 
-**Habilitar monitoreo:**
+**Enable monitoring:**
 ```bash
 docker-compose --profile monitoring up -d
 # Grafana: http://localhost:3001
 # Prometheus: http://localhost:9090
 ```
 
-**Habilitar Nginx (producción):**
+**Enable Nginx (production):**
 ```bash
 docker-compose --profile production up -d
-# Aplicación: http://localhost (puerto 80)
+# Application: http://localhost (port 80)
 ```
 
-#### **⚡ Comandos Rápidos de Gestión**
+#### **⚡ Quick Management Commands**
 
-**Inicio rápido:**
+**Quick start:**
 ```bash
-# Construir y ejecutar en un comando
+# Build and run in one command
 docker build -t ai-task-manager . && docker run -d --name ai-task-manager -p 3000:3000 --env-file .env.docker --restart unless-stopped ai-task-manager
 ```
 
-**Verificación rápida:**
+**Quick verification:**
 ```bash
-# Verificar estado
+# Check status
 docker ps | grep ai-task-manager
 
-# Ver logs en tiempo real
+# View logs in real time
 docker logs -f ai-task-manager
 
-# Verificar salud
+# Check health
 curl http://localhost:3000/api/health
 ```
 
-**Limpieza rápida:**
+**Quick cleanup:**
 ```bash
-# Parar y eliminar todo
+# Stop and remove everything
 docker stop ai-task-manager && docker rm ai-task-manager && docker rmi ai-task-manager
 
-# Limpiar sistema Docker
+# Clean Docker system
 docker system prune -a
 ```
 
-**Backup rápido:**
+**Quick backup:**
 ```bash
-# Exportar imagen
+# Export image
 docker save ai-task-manager > ai-task-manager-backup.tar
 
-# Importar imagen
+# Import image
 docker load < ai-task-manager-backup.tar
 ```
 
-#### **🔧 Troubleshooting Docker**
+#### **🔧 Docker Troubleshooting**
 
-**Problema: Contenedor no inicia**
+**Problem: Container won't start**
 ```bash
-# Ver logs detallados
+# View detailed logs
 docker logs ai-task-manager
 
-# Verificar variables de entorno
+# Check environment variables
 docker exec ai-task-manager env | grep -E "(SUPABASE|OPENAI|NEXTAUTH)"
 
-# Verificar conectividad
+# Check connectivity
 docker exec ai-task-manager curl -f http://localhost:3000/api/health
 ```
 
-**Problema: Variables de entorno no cargan**
+**Problem: Environment variables not loading**
 ```bash
-# Verificar archivo .env.docker
+# Check .env.docker file
 cat .env.docker
 
-# Recrear contenedor con variables
+# Recreate container with variables
 docker run -d --name ai-task-manager -p 3000:3000 \
-  -e NEXT_PUBLIC_SUPABASE_URL="tu_url" \
-  -e NEXT_PUBLIC_SUPABASE_ANON_KEY="tu_key" \
-  -e OPENAI_API_KEY="tu_key" \
+  -e NEXT_PUBLIC_SUPABASE_URL="your_url" \
+  -e NEXT_PUBLIC_SUPABASE_ANON_KEY="your_key" \
+  -e OPENAI_API_KEY="your_key" \
   ai-task-manager
 ```
 
-**Problema: Puerto 3000 ocupado**
+**Problem: Port 3000 occupied**
 ```bash
-# Usar puerto diferente
+# Use different port
 docker run -d --name ai-task-manager -p 3001:3000 ai-task-manager
-# Acceder en http://localhost:3001
+# Access at http://localhost:3001
 ```
 
-**Problema: Base de datos no conecta (Docker Compose)**
+**Problem: Database won't connect (Docker Compose)**
 ```bash
-# Verificar estado de PostgreSQL
+# Check PostgreSQL status
 docker-compose logs postgres
 
-# Reiniciar solo la base de datos
+# Restart only database
 docker-compose restart postgres
 
-# Verificar conectividad
+# Check connectivity
 docker-compose exec postgres pg_isready -U postgres
 ```
 
-**Problema: Imagen no se construye**
+**Problem: Image won't build**
 ```bash
-# Limpiar cache de Docker
+# Clean Docker cache
 docker system prune -a
 
-# Construir sin cache
+# Build without cache
 docker build --no-cache -t ai-task-manager .
 
-# Verificar Dockerfile
+# Check Dockerfile
 docker build --progress=plain -t ai-task-manager .
 ```
 
-**Problema: Permisos en volúmenes**
+**Problem: Volume permissions**
 ```bash
-# Arreglar permisos
+# Fix permissions
 sudo chown -R $USER:$USER ./logs
 sudo chmod -R 755 ./logs
 ```
 
-#### **✅ Verificación de Funcionamiento**
+#### **✅ Functionality Verification**
 
-**Paso a paso para verificar que todo funciona:**
+**Step by step to verify everything works:**
 
-1. **Verificar que el contenedor está corriendo:**
+1. **Verify container is running:**
 ```bash
 docker ps | grep ai-task-manager
-# Debe mostrar el contenedor en estado "Up"
+# Should show container in "Up" state
 ```
 
-2. **Verificar logs de la aplicación:**
+2. **Check application logs:**
 ```bash
 docker logs ai-task-manager
-# Debe mostrar "Ready - started server on 0.0.0.0:3000"
+# Should show "Ready - started server on 0.0.0.0:3000"
 ```
 
-3. **Verificar endpoint de salud:**
+3. **Check health endpoint:**
 ```bash
 curl http://localhost:3000/api/health
-# Debe devolver: {"status":"ok","timestamp":"..."}
+# Should return: {"status":"ok","timestamp":"..."}
 ```
 
-4. **Verificar que la aplicación carga:**
+4. **Verify application loads:**
 ```bash
 curl -I http://localhost:3000
-# Debe devolver: HTTP/1.1 200 OK
+# Should return: HTTP/1.1 200 OK
 ```
 
-5. **Verificar variables de entorno:**
+5. **Check environment variables:**
 ```bash
 docker exec ai-task-manager env | grep -E "(SUPABASE|OPENAI|NEXTAUTH)"
-# Debe mostrar tus variables configuradas
+# Should show your configured variables
 ```
 
-6. **Acceder a la aplicación:**
-- Abrir navegador en `http://localhost:3000`
-- Debe cargar la página principal de AI Task Manager
-- Debe mostrar el botón "Continue with Google"
+6. **Access the application:**
+- Open browser at `http://localhost:3000`
+- Should load AI Task Manager main page
+- Should show "Continue with Google" button
 
-**Si todo funciona correctamente, tienes una versión de producción completamente funcional en Docker! 🎉**
+**If everything works correctly, you have a fully functional production version in Docker! 🎉**
 
-#### **📋 Checklist de Verificación Completa**
+#### **📋 Complete Verification Checklist**
 
-**✅ Configuración inicial:**
-- [ ] Docker instalado y funcionando
-- [ ] Archivo `.env.docker` configurado con valores reales
-- [ ] Puerto 3000 disponible
+**✅ Initial configuration:**
+- [ ] Docker installed and working
+- [ ] `.env.docker` file configured with real values
+- [ ] Port 3000 available
 
-**✅ Build exitoso:**
-- [ ] `docker build -t ai-task-manager .` ejecuta sin errores
-- [ ] Imagen se crea correctamente
-- [ ] No hay warnings críticos en el build
+**✅ Successful build:**
+- [ ] `docker build -t ai-task-manager .` runs without errors
+- [ ] Image created correctly
+- [ ] No critical warnings in build
 
-**✅ Contenedor funcionando:**
-- [ ] Contenedor inicia sin errores
-- [ ] Logs muestran "Ready in XXms"
-- [ ] Health check responde correctamente
-- [ ] Aplicación accesible en navegador
+**✅ Container working:**
+- [ ] Container starts without errors
+- [ ] Logs show "Ready in XXms"
+- [ ] Health check responds correctly
+- [ ] Application accessible in browser
 
-**✅ Funcionalidades verificadas:**
-- [ ] Página principal carga correctamente
-- [ ] Botón "Continue with Google" visible
-- [ ] API de salud responde
-- [ ] Variables de entorno cargadas
+**✅ Features verified:**
+- [ ] Main page loads correctly
+- [ ] "Continue with Google" button visible
+- [ ] Health API responds
+- [ ] Environment variables loaded
 
-**✅ Producción lista:**
-- [ ] Contenedor configurado con `--restart unless-stopped`
-- [ ] Health check funcionando
-- [ ] Logs monitoreables
-- [ ] Backup de datos configurado (si aplica)
+**✅ Production ready:**
+- [ ] Container configured with `--restart unless-stopped`
+- [ ] Health check working
+- [ ] Logs monitorable
+- [ ] Data backup configured (if applicable)
 
-## 📱 Uso de la Aplicación
+## 📱 Application Usage
 
-### **1. Inicio de Sesión**
-- Haz clic en "Continue with Google" para autenticarte
-- La aplicación detectará automáticamente tu configuración
+### **1. Login**
+- Click "Continue with Google" to authenticate
+- The application will automatically detect your configuration
 
-### **2. Crear Tareas**
-- Escribe tu tarea en lenguaje natural (ej: "Preparar presentación para el cliente el viernes")
-- La IA analizará automáticamente:
-  - Prioridad y urgencia
-  - Fecha de vencimiento
-  - Categoría y etiquetas
-  - Contexto emocional y laboral
-  - Herramientas necesarias
-  - Criterios de éxito
+### **2. Create Tasks**
+- Write your task in natural language (e.g., "Prepare presentation for client on Friday")
+- AI will automatically analyze:
+  - Priority and urgency
+  - Due date
+  - Category and tags
+  - Emotional and work context
+  - Necessary tools
+  - Success criteria
 
-### **3. Gestionar Tareas**
-- **Filtrar**: Por estado, prioridad o categoría
-- **Ordenar**: Por fecha, prioridad o urgencia
-- **Buscar**: En tiempo real por título o contenido
-- **Expandir**: Ver análisis detallado de IA
-- **Completar**: Marcar tareas como completadas
-- **Eliminar**: Remover tareas no deseadas
+### **3. Manage Tasks**
+- **Filter**: By status, priority, or category
+- **Sort**: By date, priority, or urgency
+- **Search**: Real-time search by title or content
+- **Expand**: View detailed AI analysis
+- **Complete**: Mark tasks as completed
+- **Delete**: Remove unwanted tasks
 
-### **4. Idiomas Soportados**
-La aplicación procesa automáticamente texto en:
-- **Español**: "Llamar a mamá este fin de semana"
+### **4. Supported Languages**
+The application automatically processes text in:
+- **Spanish**: "Llamar a mamá este fin de semana"
 - **English**: "Prepare quarterly report for board meeting"
-- **Français**: "Préparer le rapport trimestriel"
-- **Deutsch**: "Quartalsbericht für Vorstandssitzung vorbereiten"
-- **Italiano**: "Preparare il rapporto trimestrale"
-- **Português**: "Preparar relatório trimestral"
+- **French**: "Préparer le rapport trimestriel"
+- **German**: "Quartalsbericht für Vorstandssitzung vorbereiten"
+- **Italian**: "Preparare il rapporto trimestrale"
+- **Portuguese**: "Preparar relatório trimestral"
 
-*Nota: La detección de idioma utiliza IA avanzada y puede reconocer otros idiomas, pero la traducción está optimizada para estos 6 idiomas principales.*
+*Note: Language detection uses advanced AI and can recognize other languages, but translation is optimized for these 6 main languages.*
 
-## 🔧 Configuración Avanzada
+## 🔧 Advanced Configuration
 
-### **Límites de Tareas (Modo Demo)**
+### **Task Limits (Demo Mode)**
 ```bash
-# Habilitar límites
+# Enable limits
 NEXT_PUBLIC_ENABLE_TASK_LIMIT=true
 NEXT_PUBLIC_MAX_TASKS_PER_USER=5
-NEXT_PUBLIC_SUPPORT_EMAIL=support@tu-empresa.com
+NEXT_PUBLIC_SUPPORT_EMAIL=support@your-company.com
 ```
 
-### **Personalización de IA**
-- Modifica `lib/ai-enhanced.ts` para ajustar el análisis
-- Configura `lib/language-detection.ts` para nuevos idiomas
-- Ajusta prompts en `app/api/process-task/route.ts`
+### **AI Customization**
+- Modify `lib/ai-enhanced.ts` to adjust analysis
+- Configure `lib/language-detection.ts` for new languages
+- Adjust prompts in `app/api/process-task/route.ts`
 
-### **Técnicas de Prompt Engineering Implementadas**
-- **Structured Outputs**: JSON schema detallado en `lib/ai-enhanced.ts` líneas 60-84
-- **Chain-of-Thought**: Razonamiento estructurado en líneas 86-94
-- **Few-Shot Learning**: Ejemplos específicos en `lib/language-detection.ts` líneas 404-408
-- **Context Injection**: Contexto temporal dinámico en líneas 52-58
-- **Role-Based Prompting**: Prompts especializados por dominio
-- **Temperature Optimization**: 0.1-0.2 para consistencia máxima
-- **Multi-Step Processing**: Pipeline de 3 etapas especializadas
-- **Error Handling**: Sistemas de fallback robustos
-- **Domain-Specific**: Prompts optimizados para gestión de tareas
-- **Constraint-Based**: Reglas de negocio específicas (fechas, validaciones)
+### **Implemented Prompt Engineering Techniques**
+- **Structured Outputs**: Detailed JSON schema in `lib/ai-enhanced.ts` lines 60-84
+- **Chain-of-Thought**: Structured reasoning in lines 86-94
+- **Few-Shot Learning**: Specific examples in `lib/language-detection.ts` lines 404-408
+- **Context Injection**: Dynamic temporal context in lines 52-58
+- **Role-Based Prompting**: Specialized prompts by domain
+- **Temperature Optimization**: 0.1-0.2 for maximum consistency
+- **Multi-Step Processing**: 3-stage specialized pipeline
+- **Error Handling**: Robust fallback systems
+- **Domain-Specific**: Prompts optimized for task management
+- **Constraint-Based**: Specific business rules (dates, validations)
 
-### **Temas y Estilos**
-- Personaliza colores en `tailwind.config.js`
-- Modifica estilos móviles en `app/mobile-styles.css`
-- Ajusta animaciones en `components/theme-toggle.tsx`
+### **Themes and Styles**
+- Customize colors in `tailwind.config.js`
+- Modify mobile styles in `app/mobile-styles.css`
+- Adjust animations in `components/theme-toggle.tsx`
 
-## 📊 Estructura del Proyecto
+## 📊 Project Structure
 
 ```
 ai-task-manager/
@@ -572,31 +572,31 @@ ai-task-manager/
 ## 🧪 Testing
 
 ```bash
-# Ejecutar tests
+# Run tests
 npm run test
 
-# Tests con cobertura
+# Tests with coverage
 npm run test:coverage
 
-# Tests en modo watch
+# Tests in watch mode
 npm run test:watch
 
-# Verificación de tipos
+# Type checking
 npm run type-check
 ```
 
-## 📈 Rendimiento
+## 📈 Performance
 
-### **Optimizaciones Implementadas**
-- **Lazy Loading**: Componentes cargados bajo demanda
-- **Memoización**: Optimización de re-renders
-- **Caching**: Cache inteligente para respuestas de IA
-- **Bundle Splitting**: Código dividido por rutas
-- **Image Optimization**: Optimización automática de imágenes
-- **Fallback Systems**: Sistemas de respaldo para IA y traducción
-- **Error Boundaries**: Manejo robusto de errores de IA
+### **Implemented Optimizations**
+- **Lazy Loading**: Components loaded on demand
+- **Memoization**: Re-render optimization
+- **Caching**: Intelligent cache for AI responses
+- **Bundle Splitting**: Code divided by routes
+- **Image Optimization**: Automatic image optimization
+- **Fallback Systems**: Backup systems for AI and translation
+- **Error Boundaries**: Robust AI error handling
 
-### **Métricas de Build**
+### **Build Metrics**
 ```
 Route (app)                              Size     First Load JS
 ┌ ○ /                                    98.6 kB         193 kB
@@ -607,35 +607,35 @@ Route (app)                              Size     First Load JS
 └ ƒ /auth/callback                       0 B                0 B
 ```
 
-## 🤝 Contribución
+## 🤝 Contributing
 
-### **Cómo Contribuir**
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### **How to Contribute**
+1. Fork the repository
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### **Guías de Contribución**
-- Sigue las convenciones de código existentes
-- Añade tests para nuevas funcionalidades
-- Actualiza la documentación según sea necesario
-- Asegúrate de que todos los tests pasen
+### **Contribution Guidelines**
+- Follow existing code conventions
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para detalles.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## 🙏 Agradecimientos
+## 🙏 Acknowledgments
 
-- **OpenAI** por GPT-4 y las capacidades de procesamiento de lenguaje natural
-- **Supabase** por la infraestructura de base de datos y autenticación
-- **Vercel** por la plataforma de despliegue
-- **Next.js Team** por el framework React
-- **Tailwind CSS** por el sistema de diseño
-- **Framer Motion** por las animaciones fluidas
+- **OpenAI** for GPT-4 and natural language processing capabilities
+- **Supabase** for database infrastructure and authentication
+- **Vercel** for the deployment platform
+- **Next.js Team** for the React framework
+- **Tailwind CSS** for the design system
+- **Framer Motion** for smooth animations
 
-## 📞 Soporte
+## 📞 Support
 
 - **Email**: waldemar@szemat.pro
 - **Issues**: [GitHub Issues](https://github.com/SzematPro/ai-task-manager/issues)
@@ -643,6 +643,6 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE.md
 ---
 
 <div align="center">
-  <p>Hecho con ❤️</p>
-  <p>⭐ Si te gusta este proyecto, ¡dale una estrella!</p>
+  <p>Made with ❤️</p>
+  <p>⭐ If you like this project, give it a star!</p>
 </div>
