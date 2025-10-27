@@ -186,13 +186,20 @@ The application will be available at `http://localhost:3000`
 
 ### **Vercel (Recommended)**
 1. Connect your repository to Vercel
-2. Configure environment variables in Vercel dashboard:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `OPENAI_API_KEY`
-   - `NEXTAUTH_URL`
-   - `NEXTAUTH_SECRET`
-3. Deploy automatically (uses `vercel.json` configuration)
+2. Go to your project settings → Environment Variables
+3. Add the following environment variables:
+   - `NEXT_PUBLIC_SUPABASE_URL` = Your Supabase project URL
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = Your Supabase anon key
+   - `OPENAI_API_KEY` = Your OpenAI API key
+   - `NEXTAUTH_URL` = Your Vercel domain (e.g., `https://your-app.vercel.app`)
+   - `NEXTAUTH_SECRET` = A random secret string
+4. Deploy automatically (uses `vercel.json` configuration)
+
+**Troubleshooting Vercel Deployment:**
+- If you get environment variable errors, ensure all variables are set in Vercel dashboard
+- Make sure `NEXTAUTH_URL` matches your Vercel domain exactly
+- Check that `NEXTAUTH_SECRET` is a strong random string (32+ characters)
+- Verify Supabase URL and keys are correct
 
 ### **🐳 Docker - Container Deployment**
 
