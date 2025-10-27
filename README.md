@@ -56,6 +56,7 @@
 - **Demo Mode**: Operation without authentication for demonstration
 - **Database Security**: Functions use explicit `search_path` to prevent SQL injection attacks
 - **Performance Optimized**: RLS policies use subselects for optimal query performance at scale
+- **Legal Compliance**: Privacy Policy and Terms of Service pages included
 
 ### 📊 **Monitoring and Status**
 - **Service Status**: Real-time monitoring of Supabase, OpenAI, and local storage
@@ -186,7 +187,18 @@ NEXT_PUBLIC_SUPPORT_EMAIL=support@your-company.com
 2. Run the SQL script in `supabase/schema.sql` (includes security fixes & performance optimizations)
 3. Configure authentication with Google OAuth
 
-### **5. Environment Variables**
+### **5. Configure Google OAuth (for Production)**
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. **APIs & Services** → **Credentials** → Edit your OAuth 2.0 Client ID
+3. **Authorized JavaScript origins**: Add `https://your-app.vercel.app`
+4. **Authorized redirect URIs**: Add `https://your-supabase-project.supabase.co/auth/v1/callback`
+5. **OAuth consent screen**:
+   - **Application home page**: `https://your-app.vercel.app`
+   - **Privacy policy link**: `https://your-app.vercel.app/privacy`
+   - **Terms of service link**: `https://your-app.vercel.app/terms`
+   - **Authorized domains**: Add `your-app.vercel.app`
+
+### **6. Environment Variables**
 Choose the appropriate environment file based on your deployment method:
 
 **For Local Development:**
@@ -201,7 +213,7 @@ cp env.docker.example .env.docker
 # Edit .env.docker with your values
 ```
 
-### **6. Run in Development**
+### **7. Run in Development**
    ```bash
    npm run dev
    ```
@@ -596,6 +608,8 @@ ai-task-manager/
 │   │   ├── health/       # Health check endpoint
 │   │   └── process-task/ # AI task processing
 │   ├── auth/              # Authentication pages
+│   ├── privacy/           # Privacy policy page
+│   ├── terms/             # Terms of service page
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
 │   ├── mobile-styles.css  # Mobile-specific styles
