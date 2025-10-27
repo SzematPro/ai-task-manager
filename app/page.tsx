@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTaskStore } from '@/hooks/use-task-store'
 import { useBackendStatus } from '@/hooks/use-backend-status'
@@ -12,7 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { CheckCircle, Database, Brain, HardDrive, AlertCircle, Clock } from 'lucide-react'
 import { ThemeToggle, FloatingThemeToggle } from '@/components/theme-toggle'
-import { TaskLimitModal } from '@/components/task-limit-modal'
+import { OptimizedTaskLimitModal } from '@/components/optimized-components'
 
 export default function Home() {
   const formRef = useRef<HTMLFormElement>(null)
@@ -46,6 +46,39 @@ export default function Home() {
   } = useTaskStore()
   
   const { services, getStatusColor, getStatusText, getStatusTextColor } = useBackendStatus()
+
+  // Memoize filtered tasks to prevent unnecessary re-renders
+  const memoizedFilteredTasks = useMemo(() => filteredTasks, [filteredTasks])
+
+  // Memoize service status calculations
+  const memoizedServices = useMemo(() => services, [services])
+
+  // Optimize task submission with useCallback
+  const handleTaskSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!taskInput.trim() || isProcessing) return
+
+    setIsButtonPressed(true)
+    await addTask(taskInput.trim())
+    setTaskInput('')
+    
+    setTimeout(() => setIsButtonPressed(false), 200)
+  }, [taskInput, isProcessing, addTask])
+
+  // Optimize task toggle with useCallback
+  const handleTaskToggle = useCallback((taskId: string) => {
+    toggleTask(taskId)
+  }, [toggleTask])
+
+  // Optimize task deletion with useCallback
+  const handleTaskDelete = useCallback((taskId: string) => {
+    deleteTask(taskId)
+  }, [deleteTask])
+
+  // Optimize expand/collapse with useCallback
+  const handleExpandTask = useCallback((taskId: string) => {
+    setExpandedTask(expandedTaskId === taskId ? null : taskId)
+  }, [expandedTaskId, setExpandedTask])
 
   useEffect(() => {
     // Check if Supabase is configured
@@ -156,18 +189,20 @@ export default function Home() {
     }
   }
 
-  const handleAddTask = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAddTask = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const input = taskInput.trim()
-    if (input) {
+    if (input && !isProcessing) {
+      setIsButtonPressed(true)
       await addTask(input)
       setTaskInput('') // Reset input state
       // Reset form using ref
       if (formRef.current) {
         formRef.current.reset()
       }
+      setTimeout(() => setIsButtonPressed(false), 200)
     }
-  }
+  }, [taskInput, isProcessing, addTask])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     // Allow Enter key to submit (but not Shift+Enter for new lines)
@@ -752,7 +787,7 @@ export default function Home() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                     >
-                        {filteredTasks.map((task, index) => (
+                        {memoizedFilteredTasks.map((task, index) => (
                           <motion.div
                             key={`${task.id}-${task.status}`}
                             initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -778,7 +813,7 @@ export default function Home() {
                                         <input
                                           type="checkbox"
                                           checked={task.status === 'completed'}
-                                          onChange={() => toggleTask(task.id)}
+                                          onChange={() => handleTaskToggle(task.id)}
                                           className="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-lg transition-colors"
                                         />
                                       </div>
@@ -788,7 +823,7 @@ export default function Home() {
                                         </h3>
                                       </div>
                                       <button
-                                        onClick={() => setExpandedTask(expandedTaskId === task.id ? null : task.id)}
+                                        onClick={() => handleExpandTask(task.id)}
                                         className="flex items-center space-x-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors group"
                                         aria-label={expandedTaskId === task.id ? 'Collapse details' : 'Expand details'}
                                       >
@@ -998,7 +1033,7 @@ export default function Home() {
                               
                               </div>
                               <Button
-                                onClick={() => deleteTask(task.id)}
+                                onClick={() => handleTaskDelete(task.id)}
                                 variant="outline"
                                 size="sm"
                                 className="text-red-600 hover:text-red-700 hover:bg-red-50"
@@ -1024,7 +1059,7 @@ export default function Home() {
       <FloatingThemeToggle />
       
       {/* Task Limit Modal */}
-      <TaskLimitModal
+      <OptimizedTaskLimitModal
         isOpen={isTaskLimitModalOpen}
         onClose={() => setTaskLimitModalOpen(false)}
         maxTasks={maxTasksAllowed}

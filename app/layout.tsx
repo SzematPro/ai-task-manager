@@ -5,6 +5,7 @@ import './mobile-styles.css'
 import { ThemeProvider } from '@/lib/theme-provider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
+import { PerformanceMonitor } from '@/components/performance-monitor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,6 +59,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <PerformanceMonitor />
       </body>
     </html>
   )
