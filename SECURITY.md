@@ -34,12 +34,19 @@ $$ language 'plpgsql' SET search_path = public, pg_catalog;
 
 **Implementation**: The security fix is included in `supabase/schema.sql` for new deployments. No additional migration is needed.
 
+### RLS Performance Optimization
+- **Issue**: Direct calls to `auth.uid()` in RLS policies cause per-row re-evaluation, hurting performance at scale
+- **Solution**: Wrapped `auth.uid()` calls in subselects: `(SELECT auth.uid())`
+- **Benefit**: Function is evaluated once per query instead of per row, significantly improving performance
+- **Implementation**: Performance optimizations are included in `supabase/schema.sql` for new deployments
+
 ## Security Features
 
 ### Row Level Security (RLS)
 - All tables have RLS enabled
 - Users can only access their own data
 - 4 comprehensive RLS policies implemented
+- **Performance Optimized**: RLS policies use subselects (e.g., `(SELECT auth.uid())`) to prevent per-row re-evaluation of auth functions, improving query performance at scale
 
 ### Authentication
 - Google OAuth integration

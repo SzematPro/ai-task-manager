@@ -22,18 +22,21 @@ CREATE INDEX IF NOT EXISTS idx_tasks_created_at ON tasks(created_at);
 -- Enable Row Level Security (RLS)
 ALTER TABLE tasks ENABLE ROW LEVEL SECURITY;
 
--- Create RLS policies
+-- Create RLS policies (optimized with subselects for better performance)
+-- Performance Note: Using (SELECT auth.uid()) instead of auth.uid() prevents
+-- per-row re-evaluation of the auth function, significantly improving query
+-- performance at scale. This is a Supabase-recommended optimization.
 CREATE POLICY "Users can view their own tasks" ON tasks
-  FOR SELECT USING (auth.uid() = user_id);
+  FOR SELECT USING (user_id = (SELECT auth.uid()));
 
 CREATE POLICY "Users can insert their own tasks" ON tasks
-  FOR INSERT WITH CHECK (auth.uid() = user_id);
+  FOR INSERT WITH CHECK (user_id = (SELECT auth.uid()));
 
 CREATE POLICY "Users can update their own tasks" ON tasks
-  FOR UPDATE USING (auth.uid() = user_id);
+  FOR UPDATE USING (user_id = (SELECT auth.uid()));
 
 CREATE POLICY "Users can delete their own tasks" ON tasks
-  FOR DELETE USING (auth.uid() = user_id);
+  FOR DELETE USING (user_id = (SELECT auth.uid()));
 
 -- Create function to automatically update updated_at timestamp
 -- Security: SET search_path prevents search_path manipulation attacks

@@ -24,6 +24,12 @@ In your Vercel project settings, go to **Environment Variables** and add:
 2. Wait for the build to complete
 3. Your app will be available at `https://your-app.vercel.app`
 
+### 4. Analytics & Monitoring
+- **Analytics**: User behavior and engagement tracking starts automatically
+- **Speed Insights**: Performance data collection begins automatically
+- **Dashboard**: View analytics in your Vercel dashboard under "Analytics" and "Speed Insights"
+- **Metrics**: Monitor user engagement, page views, and Core Web Vitals
+
 ## Environment Variable Details
 
 ### Required Variables
