@@ -54,6 +54,7 @@
 - **Security Policies**: 4 RLS policies that guarantee complete data isolation
 - **Error Handling**: Robust management of authentication errors and redirection
 - **Demo Mode**: Operation without authentication for demonstration
+- **Database Security**: Functions use explicit `search_path` to prevent SQL injection attacks
 
 ### 📊 **Monitoring and Status**
 - **Service Status**: Real-time monitoring of Supabase, OpenAI, and local storage
@@ -156,10 +157,25 @@ NEXT_PUBLIC_SUPPORT_EMAIL=support@your-company.com
 
 ### **4. Configure Supabase**
 1. Create a new project at [Supabase](https://supabase.com)
-2. Run the SQL script in `supabase/schema.sql`
+2. Run the SQL script in `supabase/schema.sql` (includes security fixes)
 3. Configure authentication with Google OAuth
 
-### **5. Run in Development**
+### **5. Environment Variables**
+Choose the appropriate environment file based on your deployment method:
+
+**For Local Development:**
+```bash
+cp env.example .env.local
+# Edit .env.local with your values
+```
+
+**For Docker Deployment:**
+```bash
+cp env.docker.example .env.docker
+# Edit .env.docker with your values
+```
+
+### **6. Run in Development**
 ```bash
 npm run dev
 ```
@@ -170,8 +186,13 @@ The application will be available at `http://localhost:3000`
 
 ### **Vercel (Recommended)**
 1. Connect your repository to Vercel
-2. Configure environment variables
-3. Deploy automatically
+2. Configure environment variables in Vercel dashboard:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `OPENAI_API_KEY`
+   - `NEXTAUTH_URL`
+   - `NEXTAUTH_SECRET`
+3. Deploy automatically (uses `vercel.json` configuration)
 
 ### **🐳 Docker - Container Deployment**
 
@@ -565,9 +586,12 @@ ai-task-manager/
 │   ├── favicon files     # App icons
 │   └── site.webmanifest  # PWA manifest
 ├── supabase/             # Database schema
-│   └── schema.sql        # PostgreSQL schema
+│   └── schema.sql        # PostgreSQL schema (includes security fixes)
 ├── types/                # TypeScript definitions
 │   └── task.ts           # Task type definitions
+├── env.example           # Environment variables template (local dev)
+├── env.docker.example    # Environment variables template (Docker)
+├── vercel.json           # Vercel deployment configuration
 └── Configuration files   # Project configuration
 ```
 
