@@ -789,7 +789,8 @@ export default function Home() {
                                       </div>
                                       <button
                                         onClick={() => setExpandedTask(expandedTaskId === task.id ? null : task.id)}
-                                        className="flex items-center justify-center w-8 h-8 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                                        className="flex items-center space-x-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors group"
+                                        aria-label={expandedTaskId === task.id ? 'Collapse details' : 'Expand details'}
                                       >
                                         <svg 
                                           className={`w-4 h-4 transition-transform duration-200 ${expandedTaskId === task.id ? 'rotate-180' : ''}`}
@@ -799,6 +800,9 @@ export default function Home() {
                                         >
                                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                         </svg>
+                                        <span className="text-xs font-medium opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-200">
+                                          {expandedTaskId === task.id ? 'Collapse' : 'Expand'}
+                                        </span>
                                       </button>
                                     </div>
                                 

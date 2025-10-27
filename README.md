@@ -46,6 +46,8 @@
 - **Dark/Light Theme**: Automatic switching based on system preferences
 - **Smooth Animations**: Fluid transitions with Framer Motion
 - **Optimized UI/UX**: Separated action buttons to prevent accidental errors
+- **Intuitive Controls**: Clear expand/collapse labels for better task management
+- **Accessibility**: ARIA labels and keyboard navigation support
 
 ### 🔐 **Authentication and Security**
 - **Google OAuth**: Secure login with Google
