@@ -714,6 +714,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - **Email**: waldemar@szemat.pro
 - **Issues**: [GitHub Issues](https://github.com/SzematPro/ai-task-manager/issues)
+- **Repository**: [https://github.com/SzematPro/ai-task-manager](https://github.com/SzematPro/ai-task-manager)
 
 ---
 

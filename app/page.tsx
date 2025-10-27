@@ -1048,7 +1048,7 @@ export default function Home() {
                 Terms of Service
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/SzematPro/ai-task-manager" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"

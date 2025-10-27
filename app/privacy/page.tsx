@@ -146,7 +146,17 @@ export default function PrivacyPage() {
                 className="text-blue-600 dark:text-blue-400 hover:underline"
               >
                 {process.env.NEXT_PUBLIC_SUPPORT_EMAIL || 'support@example.com'}
+              </a>{' '}
+              or visit our{' '}
+              <a 
+                href="https://github.com/SzematPro/ai-task-manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                GitHub repository
               </a>
+              .
             </p>
 
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
